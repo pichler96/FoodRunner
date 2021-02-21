@@ -1,0 +1,22 @@
+node_modules/**/*
+.expo/*
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+web-report/
+src/generated/**/*.ts
+src/graphql/schema.json
+
+# macOS
+.DS_Store
+
+# Jest
+coverage/
+
+# env
+.env.json
