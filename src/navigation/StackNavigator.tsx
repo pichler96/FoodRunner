@@ -93,9 +93,7 @@ export default function StackNavigator() {
           if (tabScene === 'HomeTab') {
             return {
               title:
-              authToken && userData?.authenticatedUser.firstName
-              ? `${t('FoodRunner')}, ${userData.authenticatedUser.firstName}`
-              : t('FoodRunner'),
+             t('FoodRunner'),
               headerLeft: () => <CurrencyPicker />,
               headerRight: () => (
                 <HeaderIconButton
