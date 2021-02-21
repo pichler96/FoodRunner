@@ -1,6 +1,6 @@
 
 
-<h5 align="center">FoodRunner</h5>
+<h1 align="center">FoodRunner</h1>
 <h3 align="center">Grocery Delivery Service</h3>
 
 
