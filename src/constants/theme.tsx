@@ -54,7 +54,8 @@ export const headerOptions: StackNavigationOptions = {
   },
   headerTitleStyle: {
     fontFamily: FONT_FAMILY.MEDIUM,
-    fontSize: FONT_SIZE.large,
+    fontSize: FONT_SIZE.extraLarge,
+    color: COLORS.primaryColor
   },
   headerBackTitleVisible: false,
   headerLeftContainerStyle: {

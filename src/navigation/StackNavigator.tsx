@@ -93,9 +93,9 @@ export default function StackNavigator() {
           if (tabScene === 'HomeTab') {
             return {
               title:
-                authToken && userData?.authenticatedUser.firstName
-                  ? `${t('Hello')}, ${userData.authenticatedUser.firstName}`
-                  : t('Hello'),
+              authToken && userData?.authenticatedUser.firstName
+              ? `${t('FoodRunner')}, ${userData.authenticatedUser.firstName}`
+              : t('FoodRunner'),
               headerLeft: () => <CurrencyPicker />,
               headerRight: () => (
                 <HeaderIconButton
@@ -104,7 +104,8 @@ export default function StackNavigator() {
                 />
               ),
               headerStyle: {
-                shadowColor: COLORS.transparent,
+                backgroundColor: COLORS.secondaryColor,
+                shadowColor: COLORS.primaryColor,
                 elevation: 0,
               },
             };
@@ -267,6 +268,6 @@ const styles = StyleSheet.create({
   },
   badgeText: {
     fontSize: 10,
-    color: COLORS.white,
+    color: COLORS.primaryColor,
   },
 });
