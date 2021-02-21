@@ -1,0 +1,84 @@
+type AuthenticatedUser {
+  firstName: String!
+  lastName: String!
+  id: String!
+  email: String!
+  expiresAt: String!
+}
+
+input AuthenticatedUserInput {
+  firstName: String!
+  lastName: String!
+  id: String!
+  email: String!
+  expiresAt: String!
+}
+
+type ShoppingCart {
+  id: String!
+  items: [LineItem!]!
+}
+
+type LineItem {
+  quantity: Int!
+  variantId: String!
+}
+
+input LineItemInput {
+  quantity: Int!
+  variantId: String!
+}
+
+type WishlistProduct {
+  id: String!
+  handle: String!
+  images: [String!]!
+  title: String!
+  price: Int!
+  discount: Int!
+  availableForSale: Boolean!
+}
+
+input WishlistProductInput {
+  id: String!
+  handle: String!
+  images: [String!]!
+  title: String!
+  price: Int!
+}
+
+type SearchDetail {
+  title: String!
+}
+
+type ProductDetail {
+  id: String!
+  title: String!
+  productType: String!
+  price: Int!
+  image: String!
+}
+
+type DefaultCurrency {
+  currency: String!
+}
+
+type Query {
+  authenticatedUser: AuthenticatedUser!
+  wishlist: [WishlistProduct!]!
+  shoppingCart: ShoppingCart!
+  recentSearch: [SearchDetail!]!
+  defaultCurrency: DefaultCurrency!
+}
+
+type Mutation {
+  setAuthenticatedUser(user: AuthenticatedUserInput!): AuthenticatedUser!
+  addToWishlist(product: WishlistProductInput!): [WishlistProduct]!
+  removeFromWishlist(productHandle: String!): [WishlistProduct]!
+  addToShoppingCart(quantity: Int!, variantId: String!): ShoppingCart!
+  resetShoppingCart: ShoppingCart!
+  setShoppingCartID(id: String!): ShoppingCart!
+  setRecentSearch(search: String!): [SearchDetail]!
+  setShoppingCart(items: [LineItemInput!]!, id: String!): ShoppingCart!
+  setDefaultCurrency(currency: String!): DefaultCurrency!
+}
