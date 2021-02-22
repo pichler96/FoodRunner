@@ -14,20 +14,6 @@ Prerequisites:
 - [Recommended] Install [yarn](https://legacy.yarnpkg.com/docs/install)
   `curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.21.1`
   Note: This will install [v1.x](https://github.com/yarnpkg/yarn/releases) since v2 is not yet compatible with React Native.
-- [Get an API key](https://help.shopify.com/en/api/getting-started/authentication/private-authentication#generate-credentials-from-the-shopify-admin) for the Shopify Storefront API for your Shopify store.
-
-Clone the repository:
-
-```sh
-git clone git@github.com:sellflow/sellflow.git
-cd sellflow
-```
-
-Make a file `.env.json` in the root of the project, based on [the example file](https://github.com/sellflow/sellflow/tree/master/.env-example.json). This will contain your Shopify API Key (mentioned above).
-
-```sh
-cp .env-example.json .env.json
-```
 
 Install dependencies:
 
@@ -41,13 +27,10 @@ Run the app:
 yarn start
 ```
 
-- Fork the repository.
-- Follow the Getting Started instructions above.
-- Use your favorite code editor to develop a feature or fix.
-- Commit your change to a branch.
+Tests:
+
 - Run the tests:
   `yarn test-full`
-- Push to your fork and create a PR.
 
 ## License
 
